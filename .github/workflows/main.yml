@@ -7,23 +7,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: 1. Checkout mã nguồn
+      - name: Checkout ma nguon
         uses: actions/checkout@v4
 
-      - name: 2. Cài đặt Node.js
+      - name: Cai dat Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '18'
 
-      - name: 3. Cài đặt công cụ Newman (Postman CLI)
+      - name: Cai dat Newman
         run: npm install -g newman
 
-      
-      
-      - name: 4. Chạy bộ Test tự động
-        # Giả lập thao tác Run Collection trên Postman
-        run: >
-          newman run RestfulBooker.postman_collection.json
-          -e RestfulBooker.postman_environment.json
-
-
+      - name: Chay bo test tu dong
+        run: newman run RestfulBooker.postman_collection.json -e RestfulBooker.postman_environment.json
