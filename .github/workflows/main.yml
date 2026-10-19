@@ -20,5 +20,5 @@ jobs:
 
       - name: 4. Chạy bộ Test tự động
         run: >
-          newman run RestfulBooker.postman_collection.json
+          newman run RestfulBooker_API_Collection.postman_collection
           -e RestfulBooker.postman_environment.json
